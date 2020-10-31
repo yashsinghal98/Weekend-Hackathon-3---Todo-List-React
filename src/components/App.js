@@ -37,12 +37,18 @@ function App() {
         {data.map((ele, index) => (
           <div key={ele.data}>
             {ele.data}
-            <button onClick={() => handleedit(index)}>edit</button>
-            <button onClick={() => handledelete(index)}>delete</button>
+            <button onClick={() => handleedit(index)} className="edit">
+              edit
+            </button>
+            <button onClick={() => handledelete(index)} className="delete">
+              delete
+            </button>
             {ele.show === true ? (
               <>
-                <input type="text" id="ed"></input>
-                <button onClick={() => handlesave(index)}>save</button>
+                <input type="text" id="ed" className="editTask"></input>
+                <button onClick={() => handlesave(index)} className="saveTask">
+                  save
+                </button>
               </>
             ) : null}
           </div>
