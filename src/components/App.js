@@ -35,25 +35,27 @@ function App() {
       <button id="btn" onClick={handleclick}>
         Add
       </button>
-      {data.map((ele, index) => (
-        <div className="list" key={index}>
-          {ele.data1}
-          <button onClick={() => handleedit(index)} className="edit">
-            edit
-          </button>
-          <button onClick={() => handledelete(index)} className="delete">
-            delete
-          </button>
-          {ele.show === true ? (
-            <>
-              <input type="text" id="ed" className="editTask"></input>
-              <button onClick={() => handlesave(index)} className="saveTask">
-                save
-              </button>
-            </>
-          ) : null}
-        </div>
-      ))}
+      <ul className="todo-list">
+        {data.map((ele, index) => (
+          <li className="list" key={index}>
+            {ele.data1}
+            <button onClick={() => handleedit(index)} className="edit">
+              edit
+            </button>
+            <button onClick={() => handledelete(index)} className="delete">
+              delete
+            </button>
+            {ele.show === true ? (
+              <>
+                <input type="text" id="ed" className="editTask"></input>
+                <button onClick={() => handlesave(index)} className="saveTask">
+                  save
+                </button>
+              </>
+            ) : null}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
