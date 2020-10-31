@@ -19,7 +19,7 @@ function App() {
   }
   function handledelete(index) {
     let temp = [...data];
-    delete temp[index];
+    temp.splice(index, 1);
     setdata(temp);
   }
   function handlesave(index) {
@@ -36,7 +36,7 @@ function App() {
         Add
       </button>
       {data.map((ele, index) => (
-        <div className="list">
+        <div className="list" key={index}>
           {ele.data}
           <button onClick={() => handleedit(index)} className="edit">
             edit
