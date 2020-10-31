@@ -8,7 +8,7 @@ function App() {
     document.getElementById("task").value = "";
     if (val === "") return;
     let arr = [...data];
-    let obj = { data: val, show: false };
+    let obj = { data1: val, show: false };
     arr.push(obj);
     setdata(arr);
   }
@@ -26,7 +26,7 @@ function App() {
     let temp = [...data];
     if (document.getElementById("ed").value === "") return;
     temp[index].show = false;
-    temp[index].data = document.getElementById("ed").value;
+    temp[index].data1 = document.getElementById("ed").value;
     setdata(temp);
   }
   return (
@@ -37,7 +37,7 @@ function App() {
       </button>
       {data.map((ele, index) => (
         <div className="list" key={index}>
-          {ele.data}
+          {ele.data1}
           <button onClick={() => handleedit(index)} className="edit">
             edit
           </button>
