@@ -35,7 +35,7 @@ function App() {
       <button id="btn" onClick={handleclick}>
         Add
       </button>
-      <ul className="todo-list">
+      <ul className="todo">
         {data.map((ele, index) => (
           <li className="list" key={index}>
             {ele.data1}
