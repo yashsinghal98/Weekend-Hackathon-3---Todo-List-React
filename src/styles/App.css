@@ -13,7 +13,3 @@ button {
 .bg-pink {
   background-color: pink;
 }
-.todo {
-  display: flex;
-  flex-direction: column;
-}
