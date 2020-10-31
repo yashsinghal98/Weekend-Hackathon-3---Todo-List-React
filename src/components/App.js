@@ -33,9 +33,9 @@ function App() {
     <div id="main">
       <input id="task" type="text"></input>
       <button id="btn" onClick={handleclick}></button>
-      <ul>
+      <ul className="list">
         {data.map((ele, index) => (
-          <li key={ele.data} className="list">
+          <li>
             {ele.data}
             <button onClick={() => handleedit(index)} className="edit">
               edit
