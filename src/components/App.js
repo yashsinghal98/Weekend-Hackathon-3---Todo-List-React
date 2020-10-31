@@ -35,9 +35,9 @@ function App() {
       <button id="btn" onClick={handleclick}>
         Add
       </button>
-      <ul className="todo">
+      <ul className="list">
         {data.map((ele, index) => (
-          <li className="list" key={index}>
+          <li key={index}>
             {ele.data1}
             <button onClick={() => handleedit(index)} className="edit">
               edit
